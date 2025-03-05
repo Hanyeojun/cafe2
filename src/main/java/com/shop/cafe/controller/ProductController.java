@@ -13,6 +13,7 @@ import com.shop.cafe.service.ProductService;
 @RestController //=뷰 템플릿을 따로 갖지 않음
 @CrossOrigin("http://127.0.0.1:5500") //5500은 프론트서버임을 알려줌
 public class ProductController {
+	
 	@Autowired
 	ProductService productService;
 	
@@ -20,7 +21,7 @@ public class ProductController {
 	 public List<Product> getAllProducts() {
 		//return "ok"; //프레임워크가 잘 작동하는지 확인하기 위함
 		try {
-	    	  System.out.println("getAllProducts 실행됨");
+	    	  //System.out.println("getAllProducts 실행됨");
 	         return productService.getAllProducts();
 	      }catch (Exception e) {
 	         e.printStackTrace();
